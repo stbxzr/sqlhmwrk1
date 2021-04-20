@@ -1,8 +1,9 @@
 const inquirer = require("inquirer");
 const addJs = require("./add");
+const viewLst = require("./viewList")
 
 let sqlExtension;
-
+ 
 function promptEx(connection) {
   sqlExtension = connection;
   mainMenu();
@@ -23,7 +24,7 @@ function mainMenu() {
             addJs.addMenu(sqlExtension, mainMenu);
           break;
         case "View":
-            
+            viewLst.previewList(sqlExtension, mainMenu);
           break;
         case "Update":
           break;

@@ -47,4 +47,5 @@ function addDepartment(sqlExtension, mainMenu) {
     });
 }
 
-module.exports = { addMenu };
+
+module.exports = {addMenu};

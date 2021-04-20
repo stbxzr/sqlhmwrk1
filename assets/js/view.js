@@ -12,3 +12,4 @@ function viewDepartments(sqlExtension, mainMenu) {
 }
 
 module.exports = { viewDepartments };
+

@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const inquirer = require('inquirer');
+const menu = require('./assets/js/prompt');
 
 
 const connection = mysql.createConnection({
@@ -14,9 +14,9 @@ const connection = mysql.createConnection({
 });
 
 
+connection.connect((err) => {
+ if (err) throw err;
 
- connection.connect((err) => {
-  if (err) throw err;
-  console.log(`connected as id ${connection.threadId}\n`);
-  allSongs();
+ console.log(`hello!\n`);
+ menu.promptEx(connection);
 });

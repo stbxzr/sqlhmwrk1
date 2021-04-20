@@ -30,10 +30,19 @@ CREATE TABLE employees(
 );
 
 INSERT INTO department (name)
-VALUES ("sales");
+VALUES ("marketing"),
+("customer service"),
+("accounting"),
+("sales");
 
-INSERT INTO roles (title, salary)
-VALUES ("sales lead", 1000);
+INSERT INTO roles (title, salary, department_id)
+VALUES ("product development", 70000, 1),
+("call associate", 40000, 2),
+("accountant", 80000, 3),
+("sales lead", 60000, 4);
 
-INSERT INTO employees (first_name, last_name)
-VALUES ("julian", "almendarez");
+INSERT INTO employees (first_name, last_name, role_id, manager_id)
+VALUES ("julian", "almendarez", 1, NULL),
+("bob", "smith", 2, 1),
+("noah", "ark", 3, 1),
+("brad", "smart", 3, 1);

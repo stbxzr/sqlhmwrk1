@@ -1,10 +1,9 @@
 const inquirer = require("inquirer");
 
 function previewList(){
+ 
+console.log("hello...")
 
-console.log("here!")
-
-   
-}
+  };
 
 module.exports = { previewList };
